@@ -29,54 +29,59 @@
 		"unit": "ppm",
 		"prefix": "more"
 	},
-	"temperature": {
+	"temp [day]": {
 		"max": 34.1,
+		"unit": "°C",
+		"prefix": "higher"
+	},
+	"ground temp [night]": {
+		"max": 18.818897,
 		"unit": "°C",
 		"prefix": "higher"
 	},
 	"confirmed cases": {
 		"max": 369660,
-		"unit": " people",
+		"unit": " ppl",
 		"prefix": "more"
 	},
 	"deaths": {
 		"max": 29710,
-		"unit": " people",
+		"unit": " ppl",
 		"prefix": "more"
 	},
 	"active cases": {
 		"max": 274341,
-		"unit": " people",
+		"unit": " ppl",
 		"prefix": "more"
 	},
 	"incident rate": {
 		"max": 1900.2176516679901,
-		"unit": " people/day",
+		"unit": " ppl/day",
 		"prefix": "more"
 	},
 	"people hospitalized": {
 		"max": 89400,
-		"unit": " people",
+		"unit": " ppl",
 		"prefix": "more"
 	},
 	"mortality rate": {
 		"max": 9.591181168705788,
-		"unit": " people/day",
+		"unit": " ppl/day",
 		"prefix": "higher"
 	},
 	"testing rate": {
 		"max": 14189.402857005309,
-		"unit": " people/day",
+		"unit": " ppl/day",
 		"prefix": "higher"
 	},
 	"hospitalization rate": {
 		"max": 29.83675217743087,
-		"unit": " people/day",
+		"unit": " ppl/day",
 		"prefix": "higher"
 	},
 	"population density": {
 		"max": 27346,
-		"unit": " people/km^2",
+		"unit": " ppl/km^2",
 		"prefix": "higher"
 	}
 }

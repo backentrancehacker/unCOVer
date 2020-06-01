@@ -165,21 +165,28 @@ function generateGraphics(){
 	var axes = [];
 
 	for (let city of Object.keys(data)){
-			if (!(comp2.toLowerCase() in data[city]) && comp2 != 'Population Density') continue;
+			if (!(comp2.toLowerCase() in data[city]) && !(comp2 in updateRenames)) continue;
 			if (covidUpdates[data[city].state][updateRenames[comp1]] == "") continue;
 
 			let latest;
 
-			if (comp2 == 'Population Density'){
-				latest = data[city]['population_density'];
+			if (comp2 in updateRenames){
+				latest = data[city][updateRenames[comp2]];
+				
+				if (typeof latest != 'number'){
+					latest = Object.values(latest);
+					latest = latest[latest.length - 1].median;
+				}		
 			}
 			else {
 				let dates = Object.values(data[city][comp2.toLowerCase()]);
 				latest = dates[dates.length - 1].median;
-			}			
+			}
 
 			let covidNum = covidUpdates[data[city].state][updateRenames[comp1]];
 
+			if (covidNum == 99999 || latest == 99999) continue;
+			
 			axes.push({x: latest, y: covidNum})
 
 			makeGraphic('US', city, data[city].coords, covidNum, latest);

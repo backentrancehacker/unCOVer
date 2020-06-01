@@ -92,6 +92,12 @@
 		}
 
 	</style>
+	<script defer>
+		const protocol = window.location.protocol
+		if(protocol != 'https:') {
+			window.location = `https://${window.location.hostname}${window.location.pathname}`
+		}
+	</script>
 </head>
 <body>
 	<main class="app">
@@ -110,7 +116,8 @@
 				<li>APIs/Datasets for relevant information</li>
 			</ul>
 			<h2>Data Sources</h2>
-			<p>Datasets were processed and synthesized from detailed records into JSON files for easier usage. For example, COVID-19 data was sourced from <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">John Hopkins</a>. Although we generally use the processed files to display data onto the map, we also used real time APIs, such as converting locations into longitude/latitude.</p>
+			<p>Datasets were processed and synthesized from detailed records into JSON files for easier usage. For example, COVID-19 data was sourced from <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">Johns Hopkins</a>. Although we generally use the processed files to display data onto the map, we also used real time APIs, such as converting locations into longitude/latitude. We also used <a href="https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MOD_LSTN_M" target="_blank">NASA data</a> for ground temperature at night. </p>
+			<a href="https://github.com/ethaniel0/unCOVer">Here's</a> a link to our GitHub.
 			<h2>About the Team</h2>
 		</div>
 		<div class="gallery">
